@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class search
+{
+	public static void cari(int key)
+		{
+		Scanner input = new Scanner (System.in);
+		int[] a = {2,7,4,9,0,8,6,1,3,5};
+		int i;
+		int n = 10;
+	
+		i=0;
+		//key = input.nextInt();
+	
+		while (i < n)
+			{
+			if (key == a[i])
+				{
+				System.out.print("Data ada pada posisi : " +i);
+				i += 1;
+				}
+			else 
+				{
+				i += 1;
+				}
+			}
+		}
+	public static void main (String []args)
+	{
+	cari(7);
+	}
+}
