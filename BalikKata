@@ -1,0 +1,22 @@
+import java.util.*;
+public class BalikKata
+	{
+  	public static void main(String[]args)
+		{
+    		Scanner br = new Scanner (System.in);
+    		Stack<Character> stack = new Stack<Character>();  
+    		String balik="";   
+    		System.out.print("Masukkan Kata : ");
+    		String kata = br.next(); 
+    		for(int i=0;i<kata.length();i++)
+			{
+      			stack.push(kata.charAt(i));
+    			}   
+    		do
+			{
+      			balik = balik + stack.pop();
+    			}
+    		while(stack.empty() == false);  
+    		System.out.println(" Hasil : " + balik);
+  		}
+	}
