@@ -1,0 +1,30 @@
+public class vector
+	{
+	//public static Vector<Vector> vmhs = new Vector<Vector>();
+	public static void main(String [] argc)
+		{
+		Vector<Vector> vmhs = new Vector<Vector>();
+		Vector<String> dmhs = new Vector<String>();
+
+		dmhs.addElement("14410100050");
+		dmhs.addElement("arda");
+		vmhs.addElement(dmhs);
+
+		Vector<String> dmhs2 = new Vector<String>();
+		vmhs.addElement(add("4444","tes"));
+		//vmhs.addElement(dmhs2);
+
+		
+		System.out.println(vmhs.elementAt(0).elementAt(0));
+		System.out.println(vmhs.elementAt(0).elementAt(1));
+		System.out.println(vmhs.elementAt(1).elementAt(0));
+		System.out.println(vmhs.elementAt(1).elementAt(1));
+		}
+	public static Vector<String> add(String nim, String nama)
+		{
+		Vector<String> v = new Vector<String>();
+		v.addElement(nim);
+		v.addElement(nama);
+		return v;
+		}
+	}
