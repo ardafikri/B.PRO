@@ -1,15 +1,26 @@
+import java.util.Date;  
+import java.text.DateFormat;  
+import java.text.SimpleDateFormat;
+import java.util.Vector;
 import java.util.*;
 import java.util.Scanner;
 
 public class TokoLaptop {
    
-         //Method Garis
+   //Method Garis
   public static void garis(){
     System.out.println("==========================");
   }
+  //Method untuk menentukan tanggal
+  public static String getTanggal() {  
+    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd   HH:mm:ss");  
+    Date date = new Date();  
+    return dateFormat.format(date);  
+  }  
   
   
     public static void main(String[] args){
+       TokoLaptop tgl = new TokoLaptop();
        Scanner in = new Scanner (System.in);
         
         //Deklarasi Tabel Laptop
@@ -307,6 +318,7 @@ public class TokoLaptop {
                                                         
                                                     System.out.println();
                                                 }
+                                                System.out.println("Tanggal & Waktu Transaksi "+tgl.getTanggal());
                                                 System.out.println("Nama Pelanggan : "+namapelanggan.elementAt(idpelanggan.indexOf(codp)));
                                                 System.out.println("Nama Laptop \t\tBanyak \t\tHarga \t\tTotal");
                                                 for (int x=0;x<n;x++) {
@@ -351,8 +363,9 @@ public class TokoLaptop {
                     break;
                 case 2 :
                             System.out.println("==========================");
-                            System.out.println("        Stok Obat         ");
+                            System.out.println("        Stok Laptop         ");
                             System.out.println("==========================");
+                            System.out.println("Stok Barang "+tgl.getTanggal());
                             System.out.println("Kode laptop\tNama laptop\tStok laptop");
                             for (int x=0;x<kodelaptop.size();x++){
                                 
